@@ -4,7 +4,7 @@ Version:	2.2
 Release:	0.1
 License:	GPL v2
 Group:		Applications/Networking
-Source0:	http://mesh.dl.sourceforge.net/sourceforge/luma/%{name}-%{version}.tar.bz2
+Source0:	http://dl.sourceforge.net/sourceforge/luma/%{name}-%{version}.tar.bz2
 # Source0-md5:	2dce8ec50eddaff4b8d8a487e514cc4f
 Source1:	%{name}.desktop
 Patch0:		%{name}-dont_check_req_while_build.patch
@@ -34,9 +34,12 @@ install -d $RPM_BUILD_ROOT{%{_prefix},%{_desktopdir},%{_pixmapsdir}}
 	--prefix=$RPM_BUILD_ROOT%{_prefix}
 
 rm -f $RPM_BUILD_ROOT%{_bindir}/luma
-echo "%{__python} %{_libdir}/%{name}/luma.py" > $RPM_BUILD_ROOT%{_bindir}/luma
+echo "%{__python} %{_libdir}/%{name}/luma.pyc" > $RPM_BUILD_ROOT%{_bindir}/luma
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install $RPM_BUILD_ROOT%{_datadir}/%{name}/icons/luma-48.png $RPM_BUILD_ROOT%{_pixmapsdir}/luma.png
+
+%py_ocomp $RPM_BUILD_ROOT%{_libdir}/%{name}
+find $RPM_BUILD_ROOT%{_libdir}/%{name} -name \*.py -exec rm {} \;
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -45,10 +48,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README
 %attr(755,root,root) %{_bindir}/*
-%dir %{_libdir}/%{name}
-%{_libdir}/%{name}/*
-%dir %{_datadir}/%{name}
-%{_datadir}/%{name}/*
+%{_libdir}/%{name}
+%{_datadir}/%{name}
 %{_mandir}/man1/*
 %{_desktopdir}/*
 %{_pixmapsdir}/*
