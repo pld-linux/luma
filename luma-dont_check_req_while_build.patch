@@ -1,0 +1,11 @@
+diff -Nur o.luma-2.2/install.py n.luma-2.2/install.py
+--- o.luma-2.2/install.py	2005-08-15 22:24:11.000000000 +0200
++++ n.luma-2.2/install.py	2005-08-17 17:32:06.357520920 +0200
+@@ -27,6 +27,7 @@
+     """ Checks for installed packages which are needed in order to run Luma.
+     Gives only a warning for missing packages.
+     """
++    return
+     
+     print "Check for preinstalled modules:\n"
+     
