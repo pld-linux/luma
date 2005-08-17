@@ -34,7 +34,7 @@ install -d $RPM_BUILD_ROOT{%{_prefix},%{_desktopdir},%{_pixmapsdir}}
 	--prefix=$RPM_BUILD_ROOT%{_prefix}
 
 rm -f $RPM_BUILD_ROOT%{_bindir}/luma
-echo "%{__python} %{_libdir}/%{name}/luma.pyc" > $RPM_BUILD_ROOT%{_bindir}/luma
+echo -e "#!%{__python} %{_libdir}/%{name}/luma.py" > $RPM_BUILD_ROOT%{_bindir}/luma
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install $RPM_BUILD_ROOT%{_datadir}/%{name}/icons/luma-48.png $RPM_BUILD_ROOT%{_pixmapsdir}/luma.png
 
