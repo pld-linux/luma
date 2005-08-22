@@ -1,0 +1,9 @@
+$ luma
+QPainter::begin: Cannot paint null pixmap
+QPainter::setPen: Will be reset by begin()
+zsh: segmentation fault  luma
+$ cat /usr/bin/luma
+#!/usr/bin/python /usr/lib/luma/luma.pyc
+$
+- to avoid this call luma.py not luma.pyc
+- don't rm *.py - luma doesn't work without *.py files
