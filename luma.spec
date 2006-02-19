@@ -43,6 +43,7 @@ install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install $RPM_BUILD_ROOT%{_datadir}/%{name}/icons/luma-48.png $RPM_BUILD_ROOT%{_pixmapsdir}/luma.png
 
 %py_ocomp $RPM_BUILD_ROOT%{_prefix}/lib/%{name}
+find $RPM_BUILD_ROOT -name "*.py" -not -name luma.py -exec rm -f '{}' ';'
 
 %clean
 rm -rf $RPM_BUILD_ROOT
