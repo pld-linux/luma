@@ -9,6 +9,7 @@ Source0:	http://dl.sourceforge.net/luma/%{name}-%{version}.tar.bz2
 # Source0-md5:	c1f3a8033a047a7046848833445ed496
 Source1:	%{name}.desktop
 Patch0:		%{name}-dont_check_req_while_build.patch
+Patch1:		%{name}-python.patch
 URL:		http://luma.sourceforge.net/
 BuildRequires:	python >= 2.3
 BuildRequires:	rpmbuild(macros) >= 1.231
@@ -28,6 +29,7 @@ Przegl±darka, narzêdzie i jeszcze wiêcej do LDAP.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
