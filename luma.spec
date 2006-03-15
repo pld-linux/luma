@@ -1,12 +1,12 @@
 Summary:	LDAP browser, utility and more
 Summary(pl):	Przegl±darka, narzêdzie i jeszcze wiêcej do LDAP
 Name:		luma
-Version:	2.2.1
+Version:	2.3
 Release:	1
 License:	GPL v2
 Group:		Applications/Networking
 Source0:	http://dl.sourceforge.net/luma/%{name}-%{version}.tar.bz2
-# Source0-md5:	3d6494ecd8933eb1cf2f9c7660aad4b0
+# Source0-md5:	c1f3a8033a047a7046848833445ed496
 Source1:	%{name}.desktop
 Patch0:		%{name}-dont_check_req_while_build.patch
 URL:		http://luma.sourceforge.net/
