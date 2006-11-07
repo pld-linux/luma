@@ -57,5 +57,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_prefix}/lib/%{name}
 %{_datadir}/%{name}
 %{_mandir}/man1/*
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
 %{_pixmapsdir}/*
