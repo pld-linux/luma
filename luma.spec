@@ -1,5 +1,5 @@
 Summary:	LDAP browser, utility and more
-Summary(pl):	Przegl±darka, narzêdzie i jeszcze wiêcej do LDAP
+Summary(pl.UTF-8):   PrzeglÄ…darka, narzÄ™dzie i jeszcze wiÄ™cej do LDAP
 Name:		luma
 Version:	2.3
 Release:	1
@@ -23,8 +23,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 LDAP browser, utility and more.
 
-%description -l pl
-Przegl±darka, narzêdzie i jeszcze wiêcej do LDAP.
+%description -l pl.UTF-8
+PrzeglÄ…darka, narzÄ™dzie i jeszcze wiÄ™cej do LDAP.
 
 %prep
 %setup -q
