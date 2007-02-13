@@ -1,5 +1,5 @@
 Summary:	LDAP browser, utility and more
-Summary(pl.UTF-8):   Przeglądarka, narzędzie i jeszcze więcej do LDAP
+Summary(pl.UTF-8):	Przeglądarka, narzędzie i jeszcze więcej do LDAP
 Name:		luma
 Version:	2.3
 Release:	1
