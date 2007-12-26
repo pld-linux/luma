@@ -1,11 +1,9 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=Luma LDAP browser and utility
 Comment=LDAP browser and utility
 Exec=luma
-Icon=luma.png
+Icon=luma
 Type=Application
 Terminal=false
 Categories=Qt;Network;
-
 # vi:encoding=utf-8
