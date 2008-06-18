@@ -1,12 +1,12 @@
 Summary:	LDAP browser, utility and more
 Summary(pl.UTF-8):	Przeglądarka, narzędzie i jeszcze więcej do LDAP
 Name:		luma
-Version:	2.3
+Version:	2.4
 Release:	1
 License:	GPL v2
 Group:		Applications/Networking
 Source0:	http://dl.sourceforge.net/luma/%{name}-%{version}.tar.bz2
-# Source0-md5:	c1f3a8033a047a7046848833445ed496
+# Source0-md5:	b15b7c4dccae6ddcedc9195dd6160944
 Source1:	%{name}.desktop
 Patch0:		%{name}-dont_check_req_while_build.patch
 Patch1:		%{name}-python.patch
@@ -42,7 +42,7 @@ install -d $RPM_BUILD_ROOT{%{_prefix},%{_desktopdir},%{_pixmapsdir}}
 rm -f $RPM_BUILD_ROOT%{_bindir}/luma
 echo '#!%{__python} %{_prefix}/lib/%{name}/luma.py' > $RPM_BUILD_ROOT%{_bindir}/luma
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
-install $RPM_BUILD_ROOT%{_datadir}/%{name}/icons/luma-48.png $RPM_BUILD_ROOT%{_pixmapsdir}/luma.png
+install $RPM_BUILD_ROOT%{_datadir}/%{name}/icons/luma-32.png $RPM_BUILD_ROOT%{_pixmapsdir}/luma.png
 
 %py_ocomp $RPM_BUILD_ROOT%{_prefix}/lib/%{name}
 find $RPM_BUILD_ROOT -name "*.py" -not -name luma.py -exec rm -f '{}' ';'
